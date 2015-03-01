@@ -110,7 +110,7 @@ The simpliest (and safest) way to update is to simply rerun the installer. It wi
 
 ```bash
 
-    curl https://j.mp/spf13-vim3 -L -o - | sh
+    curl https://j.mp/hongheng611-vim -L -o - | sh
 
 ```
 
