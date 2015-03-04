@@ -4,3 +4,21 @@ color solarized
 
 set nospell
 
+" When editing a file, always jump to the last known cursor position.
+" Don't do it when the position is invalid or when inside an event handler
+" (happens when dropping a file on gvim).
+""autocmd BufReadPost *
+""    \ if line("'\"""'") > 0 && line("'\"""'") <= line("$") |
+""    \   exe "normal g`\"" |
+""    \ endif"`
+
+let g:ctrlp_cmd = 'call CallCtrlP()'
+
+func! CallCtrlP()
+    if exists('s:called_ctrlp')
+        CtrlPLastMode
+    else
+        let s:called_ctrlp = 1
+        CtrlPMRU
+    endif
+endfunc
