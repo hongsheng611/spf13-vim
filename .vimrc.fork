@@ -22,3 +22,5 @@ func! CallCtrlP()
         CtrlPMRU
     endif
 endfunc
+
+nnoremap <C-L> :nohlsearch<CR><C-L>
